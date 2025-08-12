@@ -1,0 +1,147 @@
+<head>
+  <meta name="google-site-verification" content="UHIBas7P7vzQMD4Odg6xe11-f5gJvoheerp3C-KFB5o" />
+  <meta name="yandex-verification" content="daa201c42484db0a" />
+  <meta name="p:domain_verify" content="fc43dc57333414eacf5d72fb58420d82"/>
+  <meta charset="utf-8">
+  <meta http-equiv="Pragma" content="no-cache" />
+  <meta http-equiv="Expires" content="-1" />
+  <title>{% if page.title %}{{page.title}}{% else %}{{site.title}}{% endif %}</title>
+  <meta name="referrer" content="no-referrer-when-downgrade">
+  <link rel="icon" href="https://reptilebirds.com/assets/img/ReptileBirds.png" type="image/x-icon">
+  <meta name="robots" content="index, follow">
+
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5">
+  <link rel="shortcut icon" href="{{ " /assets/img/favicon/favicon.ico" | prepend: site.baseurl }}" type="image/x-icon">
+  <link rel="apple-touch-icon" href="{{ " /assets/img/favicon/apple-touch-icon.png" | prepend: site.baseurl }}">
+  <link rel="apple-touch-icon" sizes="72x72" href="{{ " /assets/img/favicon/apple-touch-icon-72x72.png" | prepend:
+    site.baseurl }}">
+  <link rel="apple-touch-icon" sizes="144x144" href="{{ " /assets/img/favicon/apple-touch-icon-144x144.png" | prepend:
+    site.baseurl }}">
+  <!-- Chrome, Firefox OS and Opera -->
+  <meta name="theme-color" content="#263959">
+  <!-- Windows Phone -->
+  <meta name="msapplication-navbutton-color" content="#263959">
+  <!-- iOS Safari -->
+  <meta name="apple-mobile-web-app-status-bar-style" content="#263959">
+
+<!-- Meta Description -->
+{% if page.description %}
+  <meta name="description" content="{{ page.description | escape }}">
+{% elsif site.description %}
+  <meta name="description" content="{{ site.description | escape }}">
+{% else %}
+  <meta name="description" content="Utility Tools & Software Blog">
+{% endif %}
+
+<!-- Meta Keywords -->
+{% if page.keywords %}
+  <meta name="keywords" content="{{ page.keywords | escape }}">
+{% elsif site.keywords %}
+  <meta name="keywords" content="{{ site.keywords | escape }}">
+{% else %}
+  <meta name="keywords" content="nearshore Software Development, Online Converter, Software Blog">
+{% endif %}
+
+<!-- Canonical URL -->
+{% if page.url %}
+  <link rel="canonical" href="{{ page.url | absolute_url }}">
+{% elsif site.url %}
+  <link rel="canonical" href="{{ site.url | absolute_url }}">
+{% else %}
+  <link rel="canonical" href="https://reptilebirds.com/">
+{% endif %}
+
+<!-- Open Graph Tags -->
+<meta property="og:type" content="website" />
+
+<meta property="og:title" content="{% if page.title %}{{ page.title | escape }}{% elsif site.title %}{{ site.title | escape }}{% else %}Reptile Birds{% endif %}">
+<meta property="og:description" content="{% if page.description %}{{ page.description | escape }}{% elsif site.description %}{{ site.description | escape }}{% else %}Online Converters & Blog{% endif %}">
+<meta property="og:url" content="{% if page.url %}{{ page.url | absolute_url }}{% elsif site.url %}{{ site.url | absolute_url }}{% else %}https://reptilebirds.com/{% endif %}">
+<meta property="og:image" content="{% if page.image %}{{ page.image | absolute_url }}{% elsif site.image %}{{ site.image | absolute_url }}{% else %}https://reptilebirds.com/assets/image/ReptileBirds.png{% endif %}">
+
+<!-- Twitter Card Tags -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="{% if page.title %}{{ page.title | escape }}{% elsif site.title %}{{ site.title | escape }}{% else %}Reptile Birds{% endif %}">
+<meta name="twitter:description" content="{% if page.description %}{{ page.description | escape }}{% elsif site.description %}{{ site.description | escape }}{% else %}Convert you files online and read pristegious Blog posts{% endif %}">
+<meta name="twitter:image" content="{% if page.image %}{{ page.image | absolute_url }}{% elsif site.image %}{{ site.image | absolute_url }}{% else %}https://reptilebirds.com/assets/image/ReptileBirds.png{% endif %}">
+
+  <!-- Google Fonts -->
+  <!-- Font Awesome -->
+  <!-- Styles -->
+  <link rel="stylesheet" href="{{ " assets/css/style.css" | prepend: site.baseurl }}">
+  <link rel="stylesheet" href="{{ " assets/css/media.scss" | prepend: site.baseurl }}">
+<script>
+(function() {
+  const isMobile = window.innerWidth < 768;
+
+  // Google Analytics Loader
+  const loadGA = () => {
+    if (window.__ga_loaded__) return;
+    window.__ga_loaded__ = true;
+
+    const gaScript = document.createElement('script');
+    gaScript.src = 'https://www.googletagmanager.com/gtag/js?id=G-MENT60BBXX';
+    gaScript.async = true;
+    document.head.appendChild(gaScript);
+
+    gaScript.onload = function() {
+      window.dataLayer = window.dataLayer || [];
+      function gtag() { dataLayer.push(arguments); }
+      window.gtag = gtag;
+      gtag('js', new Date());
+      gtag('config', 'G-MENT60BBXX');
+    };
+  };
+
+  // Yandex Metrika Loader
+  const loadYM = () => {
+    if (window.__ym_loaded__) return;
+    window.__ym_loaded__ = true;
+
+    const ymScript = document.createElement('script');
+    ymScript.src = 'https://mc.yandex.ru/metrika/tag.js';
+    ymScript.async = true;
+    document.head.appendChild(ymScript);
+
+    ymScript.onload = function () {
+      window.ym = window.ym || function() {
+        (window.ym.a = window.ym.a || []).push(arguments);
+      };
+      ym(102054421, 'init', {
+        clickmap: true,
+        trackLinks: true,
+        accurateTrackBounce: true
+      });
+    };
+  };
+
+  // Load all analytics after user interacts or browser is idle
+  const loadAll = () => {
+    loadGA();
+    loadYM();
+  };
+
+  if (isMobile) {
+    // Wait for user interaction on mobile
+    ['scroll', 'click', 'touchstart'].forEach(evt => {
+      window.addEventListener(evt, loadAll, { once: true, passive: true });
+    });
+
+    // Optional fallback: load anyway after 8s
+    setTimeout(loadAll, 8000);
+  } else {
+    // Wait for idle time on desktop
+    if ('requestIdleCallback' in window) {
+      requestIdleCallback(loadAll);
+    } else {
+      setTimeout(loadAll, 2000);
+    }
+  }
+})();
+</script>
+
+
+<noscript><div><img src="https://mc.yandex.ru/watch/102054421" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter -->
+</head>
