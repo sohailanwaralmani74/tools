@@ -7,9 +7,9 @@ description: Converter and metadata scrubber, Along with png to jpeg, wav to mp3
 
 <section class="hero" style="padding:36px 0; text-align:center;">
   <div class="container" style="max-width:1100px; margin:0 auto;">
-    <h1 style="font-size:2.2rem; margin:0 0 10px;">Every tool you need — in one simple toolbox</h1>
+    <h1 style="font-size:2.2rem; margin:0 0 10px;">Software And Utility Tools For Privacy</h1>
     <p style="font-size:1.05rem; color:#444;">
-      Fast, privacy-first utilities for Excel, CSV, JSON, XML, Text, Audio, and more, all 100% free and browser-based. No sign-ups, no uploads, and no bloat. Run tools instantly and keep your data local.
+      Fast, privacy-first Software And Utility for Excel, CSV, JSON, XML, Text, Audio, and more, all 100% free and browser-based. No sign-ups, no uploads, and no bloat. Run tools instantly and keep your data local.
     </p>
     <div style="display:flex; justify-content:center; gap:12px; margin-top:16px; flex-wrap:wrap;">
       <a href="/excel-tools" class="cta" style="text-decoration:none; padding:10px 14px; background:#ef6008; color:#fff; border-radius:6px;">Try Excel Tools</a>
